@@ -3,14 +3,14 @@ import TodoForm from "./TodoForm";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
 
-function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
+function Todo({ todos, completeTodo, removeTodo, updatedTodo }) {
   const [edit, setEdit] = useState({
     id: null,
     value: "",
   });
 
   const submitUpdate = (value) => {
-    updateTodo(edit.id, value);
+    updatedTodo(edit.id, value);
     setEdit({
       id: null,
       value: "",
